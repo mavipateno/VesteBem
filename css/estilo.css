@@ -1,124 +1,464 @@
+/* =====================================
+   SE VESTE BEM MAIS
+   Design elegante e acolhedor
+===================================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:"Segoe UI", Arial, sans-serif;
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+:root{
+
+    --azul:#8fc9e8;
+    --azul-forte:#3d89b5;
+    --azul-claro:#eaf7ff;
+    --dourado:#c9a227;
+    --creme:#fffaf2;
+    --branco:#ffffff;
+    --texto:#444;
+
+}
+
 
 body{
-    background:#eef7ff;
+
+    background:var(--creme);
+    color:var(--texto);
+
 }
 
+
+/* =====================
+        HEADER
+===================== */
+
+
 header{
-    background:#3b82f6;
-    color:white;
+
+    background:white;
+    padding:25px 8%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 60px;
+
+    border-bottom:3px solid var(--azul);
+
 }
+
+
+header h1{
+
+    font-size:32px;
+    color:var(--azul-forte);
+
+}
+
+
+header h1::first-letter{
+
+    color:var(--dourado);
+
+}
+
+
 
 nav a{
-    color:white;
+
     text-decoration:none;
+    color:#555;
+
     margin-left:25px;
-    font-weight:bold;
+
+    font-weight:600;
+
 }
+
+
+nav a:hover{
+
+    color:var(--dourado);
+
+}
+
+
+
+/* =====================
+        BANNER
+===================== */
+
 
 .banner{
+
+    min-height:80vh;
+
     display:flex;
-    justify-content:space-around;
     align-items:center;
-    padding:70px;
+    justify-content:space-between;
+
+    padding:60px 10%;
+
+    background:
+
+    linear-gradient(
+    120deg,
+    var(--azul-claro),
+    white
+    );
+
 }
+
+
 
 .texto{
-    width:45%;
+
+    width:50%;
+
 }
+
+
 
 .texto h2{
-    font-size:45px;
-    margin-bottom:20px;
+
+    font-size:48px;
+
+    color:var(--azul-forte);
+
+    margin-bottom:25px;
+
 }
+
+
 
 .texto p{
-    font-size:18px;
-    margin-bottom:30px;
-    line-height:28px;
+
+    font-size:19px;
+
+    line-height:32px;
+
+    margin-bottom:35px;
+
 }
 
-.botao{
-    background:#3b82f6;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:10px;
-}
+
 
 .banner img{
-    width:400px;
-    border-radius:20px;
+
+    width:420px;
+
+    border-radius:40px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.15);
+
 }
 
-.sobre{
+
+
+/* =====================
+        BOTÃO
+===================== */
+
+
+.botao{
+
+    background:var(--dourado);
+
+    color:white;
+
+    padding:16px 35px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    display:inline-block;
+
+}
+
+
+
+.botao:hover{
+
+    background:var(--azul-forte);
+
+}
+
+
+
+/* =====================
+        SEÇÕES
+===================== */
+
+
+.sobre,
+.dica,
+.lojas{
+
     text-align:center;
-    padding:60px;
+
+    padding:70px 10%;
+
 }
 
-.sobre h2{
+
+
+.sobre h2,
+.dica h2,
+.lojas h2{
+
+    color:var(--azul-forte);
+
+    font-size:34px;
+
     margin-bottom:20px;
-    color:#3b82f6;
+
 }
+
+
+
+.sobre p,
+.dica p{
+
+    font-size:18px;
+
+    line-height:32px;
+
+}
+
+
+
+/* =====================
+        CARDS
+===================== */
+
 
 .cards{
+
     display:flex;
+
     justify-content:center;
-    gap:25px;
+
     flex-wrap:wrap;
-    padding:40px;
+
+    gap:30px;
+
+    padding:40px 8%;
+
 }
+
+
 
 .card{
+
     background:white;
-    width:250px;
-    padding:25px;
-    border-radius:15px;
+
+    width:270px;
+
+    padding:35px 25px;
+
+    border-radius:25px;
+
     text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.08);
+
+
+    border-bottom:5px solid var(--dourado);
+
+
 }
+
+
 
 .card h3{
+
+    color:var(--azul-forte);
+
     margin-bottom:15px;
+
+    font-size:22px;
+
 }
 
-.dica{
+
+
+.card p{
+
+    line-height:27px;
+
+}
+
+
+
+/* =====================
+          LOGIN
+===================== */
+
+
+.login{
+
+    min-height:75vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.caixa-login{
+
+    background:white;
+
+    width:420px;
+
+    padding:45px;
+
+    border-radius:30px;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+
+.caixa-login h2{
+
     text-align:center;
-    padding:60px;
+
+    color:var(--azul-forte);
+
+    margin-bottom:25px;
+
 }
 
-.dica h2{
-    color:#3b82f6;
-    margin-bottom:20px;
+
+
+form input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin:10px 0 20px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
 }
 
-.dica h3{
-    margin-bottom:15px;
+
+
+form button{
+
+    border:none;
+
+    cursor:pointer;
+
+    width:100%;
+
 }
 
-.dica p{
-    width:60%;
-    margin:auto;
-    margin-bottom:30px;
-    line-height:28px;
-}
+
+
+/* =====================
+          FOOTER
+===================== */
+
 
 footer{
-    background:#3b82f6;
+
+    background:var(--azul-forte);
+
     color:white;
+
     text-align:center;
-    padding:40px;
+
+    padding:45px;
+
 }
 
+
+
+footer h2{
+
+    margin-bottom:15px;
+
+}
+
+
+
 footer p{
+
     margin:10px;
+
+}
+
+
+
+/* =====================
+      CELULAR
+===================== */
+
+
+@media(max-width:850px){
+
+header{
+
+    flex-direction:column;
+    gap:20px;
+
+}
+
+
+.banner{
+
+    flex-direction:column;
+    text-align:center;
+
+}
+
+
+.texto{
+
+    width:100%;
+
+}
+
+
+.banner img{
+
+    margin-top:40px;
+
+}
+
+
+.texto h2{
+
+    font-size:35px;
+
+}
+
+
 }
