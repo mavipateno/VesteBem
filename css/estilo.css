@@ -1,464 +1,678 @@
-/* =====================================
-   SE VESTE BEM MAIS
-   Design elegante e acolhedor
-===================================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Segoe UI", Arial, sans-serif;
+
+  /* CONFIGURAÇÕES GERAIS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff5f8;
+    color: #4a3540;
+    line-height: 1.6;
 }
 
-
-:root{
-
-    --azul:#8fc9e8;
-    --azul-forte:#3d89b5;
-    --azul-claro:#eaf7ff;
-    --dourado:#c9a227;
-    --creme:#fffaf2;
-    --branco:#ffffff;
-    --texto:#444;
-
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
+/* CABEÇALHO */
 
-body{
+header {
+    width: 100%;
+    background-color: #ffffff;
 
-    background:var(--creme);
-    color:var(--texto);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    padding: 20px 8%;
+
+    box-shadow: 0 2px 10px rgba(190, 120, 145, 0.12);
+
+    position: relative;
+    z-index: 10;
 }
 
-
-/* =====================
-        HEADER
-===================== */
-
-
-header{
-
-    background:white;
-    padding:25px 8%;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    border-bottom:3px solid var(--azul);
-
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #d86b91;
 }
 
-
-header h1{
-
-    font-size:32px;
-    color:var(--azul-forte);
-
+nav {
+    display: flex;
+    gap: 35px;
 }
 
+nav a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5a414c;
 
-header h1::first-letter{
-
-    color:var(--dourado);
-
+    transition: 0.3s;
 }
 
-
-
-nav a{
-
-    text-decoration:none;
-    color:#555;
-
-    margin-left:25px;
-
-    font-weight:600;
-
+nav a:hover {
+    color: #d86b91;
 }
 
+.botao-contato {
+    background-color: #e88bab;
+    color: white;
 
-nav a:hover{
+    padding: 10px 22px;
 
-    color:var(--dourado);
+    border-radius: 25px;
 
+    font-weight: bold;
+
+    transition: 0.3s;
 }
 
+.botao-contato:hover {
+    background-color: #d86b91;
+    transform: translateY(-2px);
+}
 
+/* BANNER DA PÁGINA INICIAL */
 
-/* =====================
-        BANNER
-===================== */
+.banner {
+    min-height: 560px;
 
+    padding: 70px 8%;
 
-.banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    min-height:80vh;
+    gap: 50px;
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:60px 10%;
-
-    background:
-
-    linear-gradient(
-    120deg,
-    var(--azul-claro),
-    white
+    background: linear-gradient(
+        135deg,
+        #ffe9f0,
+        #fff7fa
     );
+}
 
+.banner-texto {
+    width: 50%;
+}
+
+.banner-texto h1 {
+    font-size: 58px;
+    line-height: 1.1;
+
+    color: #c95780;
+
+    margin-bottom: 25px;
+}
+
+.banner-texto p {
+    font-size: 19px;
+
+    max-width: 500px;
+
+    margin-bottom: 30px;
+
+    color: #6b515c;
+}
+
+.botao {
+    display: inline-block;
+
+    background-color: #d96f94;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #c95780;
+
+    transform: translateY(-3px);
+}
+
+.banner-imagem {
+    width: 45%;
+}
+
+.banner-imagem img {
+    width: 100%;
+
+    max-width: 520px;
+
+    display: block;
+
+    margin: auto;
+
+    border-radius: 30px;
+
+    box-shadow: 0 10px 30px rgba(160, 90, 115, 0.18);
 }
 
 
+/*SEÇÃO DE ESTILO*/
 
-.texto{
+.estilo {
+    padding: 80px 8%;
 
-    width:50%;
+    text-align: center;
 
+    background-color: #ffffff;
+}
+
+.estilo h2 {
+    color: #c95780;
+
+    font-size: 32px;
+
+    margin-bottom: 45px;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    background-color: #fff5f8;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    border: 1px solid #f5d5df;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 10px 25px rgba(190, 100, 130, 0.12);
+}
+
+.icone {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #f8c5d6;
+
+    color: #b94f74;
+
+    font-size: 28px;
+}
+
+.card h3 {
+    color: #c95780;
+
+    margin-bottom: 12px;
+
+    font-size: 21px;
+}
+
+.card p {
+    color: #6b515c;
+
+    font-size: 15px;
+}
+
+/*FRASE */
+
+.frase {
+    padding: 65px 8%;
+
+    text-align: center;
+
+    background-color: #f8cbd9;
+}
+
+.frase p {
+    max-width: 800px;
+
+    margin: auto;
+
+    font-size: 25px;
+
+    font-style: italic;
+
+    color: #7c4357;
 }
 
 
+/*ATALHOS*/
 
-.texto h2{
+.atalhos {
+    padding: 80px 8%;
 
-    font-size:48px;
+    display: grid;
 
-    color:var(--azul-forte);
+    grid-template-columns: repeat(4, 1fr);
 
-    margin-bottom:25px;
+    gap: 20px;
 
+    background-color: #fff5f8;
+}
+
+.atalho {
+    background-color: white;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    border: 1px solid #f2d3dd;
+
+    transition: 0.3s;
+}
+
+.atalho:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(180, 100, 125, 0.12);
+}
+
+.atalho span {
+    display: block;
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.atalho h3 {
+    color: #c95780;
+
+    margin-bottom: 10px;
+}
+
+.atalho p {
+    color: #6b515c;
+
+    font-size: 14px;
 }
 
 
+/* PÁGINA SOBRE*/
 
-.texto p{
+.sobre {
+    padding: 80px 8%;
 
-    font-size:19px;
+    display: flex;
 
-    line-height:32px;
+    align-items: center;
 
-    margin-bottom:35px;
+    justify-content: space-between;
 
+    gap: 60px;
+}
+
+.sobre-texto {
+    width: 55%;
+}
+
+.sobre-texto h1 {
+    color: #c95780;
+
+    font-size: 48px;
+
+    margin-bottom: 25px;
+}
+
+.sobre-texto p {
+    color: #6b515c;
+
+    font-size: 17px;
+
+    margin-bottom: 18px;
+}
+
+.sobre-imagem {
+    width: 40%;
+}
+
+.sobre-imagem img {
+    width: 100%;
+
+    border-radius: 30px;
+
+    box-shadow: 0 10px 30px rgba(160, 90, 115, 0.18);
+}
+
+.objetivos {
+    padding: 80px 8%;
+
+    text-align: center;
+
+    background-color: #ffffff;
+}
+
+.objetivos h2 {
+    color: #c95780;
+
+    font-size: 32px;
+
+    margin-bottom: 45px;
+}
+
+.objetivos .cards {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 
+/*  PÁGINA DICAS*/
 
-.banner img{
+.dicas {
+    padding: 80px 8%;
 
-    width:420px;
-
-    border-radius:40px;
-
-    box-shadow:
-    0 15px 35px rgba(0,0,0,.15);
-
+    text-align: center;
 }
 
+.dicas h1 {
+    font-size: 48px;
 
+    color: #c95780;
 
-/* =====================
-        BOTÃO
-===================== */
-
-
-.botao{
-
-    background:var(--dourado);
-
-    color:white;
-
-    padding:16px 35px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    display:inline-block;
-
+    margin-bottom: 10px;
 }
 
+.subtitulo {
+    color: #6b515c;
 
+    font-size: 18px;
 
-.botao:hover{
-
-    background:var(--azul-forte);
-
+    margin-bottom: 50px;
 }
 
+.dicas-grid {
+    display: grid;
 
+    grid-template-columns: repeat(3, 1fr);
 
-/* =====================
-        SEÇÕES
-===================== */
+    gap: 25px;
 
-
-.sobre,
-.dica,
-.lojas{
-
-    text-align:center;
-
-    padding:70px 10%;
-
+    text-align: left;
 }
 
+.dica-card {
+    background-color: white;
 
+    padding: 30px;
 
-.sobre h2,
-.dica h2,
-.lojas h2{
+    border-radius: 20px;
 
-    color:var(--azul-forte);
+    border: 1px solid #f2d3dd;
 
-    font-size:34px;
-
-    margin-bottom:20px;
-
+    transition: 0.3s;
 }
 
+.dica-card:hover {
+    transform: translateY(-5px);
 
-
-.sobre p,
-.dica p{
-
-    font-size:18px;
-
-    line-height:32px;
-
+    box-shadow: 0 10px 25px rgba(180, 100, 125, 0.12);
 }
 
+.dica-icone {
+    font-size: 38px;
 
-
-/* =====================
-        CARDS
-===================== */
-
-
-.cards{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:30px;
-
-    padding:40px 8%;
-
+    margin-bottom: 15px;
 }
 
+.dica-card h2 {
+    color: #c95780;
 
+    margin-bottom: 12px;
 
-.card{
-
-    background:white;
-
-    width:270px;
-
-    padding:35px 25px;
-
-    border-radius:25px;
-
-    text-align:center;
-
-
-    box-shadow:
-
-    0 10px 25px rgba(0,0,0,.08);
-
-
-    border-bottom:5px solid var(--dourado);
-
-
+    font-size: 23px;
 }
 
+.dica-card p {
+    color: #6b515c;
 
-
-.card h3{
-
-    color:var(--azul-forte);
-
-    margin-bottom:15px;
-
-    font-size:22px;
-
+    margin-bottom: 18px;
 }
 
+.dica-card ul {
+    padding-left: 20px;
 
-
-.card p{
-
-    line-height:27px;
-
+    color: #6b515c;
 }
 
-
-
-/* =====================
-          LOGIN
-===================== */
-
-
-.login{
-
-    min-height:75vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
+.dica-card li {
+    margin-bottom: 7px;
 }
 
+/*DICA ESPECIAL*/
 
+.dica-especial {
+    margin: 20px 8% 80px;
 
-.caixa-login{
+    padding: 30px 35px;
 
-    background:white;
+    background-color: #f8cbd9;
 
-    width:420px;
+    border-radius: 25px;
 
-    padding:45px;
+    display: flex;
 
-    border-radius:30px;
+    align-items: center;
 
-
-    box-shadow:
-
-    0 15px 35px rgba(0,0,0,.12);
-
+    gap: 25px;
 }
 
+.icone-especial {
+    width: 65px;
+    height: 65px;
 
+    flex-shrink: 0;
 
-.caixa-login h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    text-align:center;
+    border-radius: 50%;
 
-    color:var(--azul-forte);
+    background-color: white;
 
-    margin-bottom:25px;
+    color: #c95780;
 
+    font-size: 30px;
 }
 
+.dica-especial h2 {
+    color: #a84768;
 
-
-form input{
-
-    width:100%;
-
-    padding:15px;
-
-    margin:10px 0 20px;
-
-    border-radius:12px;
-
-    border:1px solid #ddd;
-
+    margin-bottom: 5px;
 }
 
-
-
-form button{
-
-    border:none;
-
-    cursor:pointer;
-
-    width:100%;
-
+.dica-especial p {
+    color: #6b515c;
 }
 
+/*  RODAPÉ */
 
+footer {
+    background-color: #d86b91;
 
-/* =====================
-          FOOTER
-===================== */
+    color: white;
 
+    text-align: center;
 
-footer{
-
-    background:var(--azul-forte);
-
-    color:white;
-
-    text-align:center;
-
-    padding:45px;
-
+    padding: 45px 8%;
 }
 
+.footer-logo {
+    font-size: 25px;
 
+    font-weight: bold;
 
-footer h2{
-
-    margin-bottom:15px;
-
+    margin-bottom: 10px;
 }
 
+footer p {
+    margin-bottom: 15px;
 
-
-footer p{
-
-    margin:10px;
-
+    font-size: 15px;
 }
 
+.redes {
+    font-size: 20px;
 
-
-/* =====================
-      CELULAR
-===================== */
-
-
-@media(max-width:850px){
-
-header{
-
-    flex-direction:column;
-    gap:20px;
-
+    margin: 20px 0;
 }
 
+.copyright {
+    opacity: 0.8;
 
-.banner{
-
-    flex-direction:column;
-    text-align:center;
-
+    font-size: 13px;
 }
 
+/*RESPONSIVIDADE*/
 
-.texto{
+@media (max-width: 900px) {
 
-    width:100%;
+    header {
+        flex-direction: column;
 
+        gap: 20px;
+    }
+
+    .banner {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .banner-texto {
+        width: 100%;
+    }
+
+    .banner-texto p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .banner-imagem {
+        width: 80%;
+    }
+
+    .cards,
+    .objetivos .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .atalhos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre {
+        flex-direction: column;
+    }
+
+    .sobre-texto,
+    .sobre-imagem {
+        width: 100%;
+    }
+
+    .dicas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+/* ÁREA DE CONTATO */
 
-.banner img{
-
-    margin-top:40px;
-
+#contato {
+    scroll-margin-top: 20px;
 }
 
-
-.texto h2{
-
-    font-size:35px;
-
+footer h3 {
+    font-size: 22px;
+    margin: 15px 0 8px;
 }
 
-
+.contato-info {
+    margin: 20px 0;
 }
+
+.contato-info p {
+    margin: 6px 0;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .banner {
+        padding: 50px 20px;
+    }
+
+    .banner-texto h1 {
+        font-size: 40px;
+    }
+
+    .banner-imagem {
+        width: 100%;
+    }
+
+    .cards,
+    .objetivos .cards,
+    .atalhos,
+    .dicas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre,
+    .dicas {
+        padding: 50px 20px;
+    }
+
+    .sobre-texto h1,
+    .dicas h1 {
+        font-size: 38px;
+    }
+
+    .dica-especial {
+        margin: 20px 20px 50px;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
