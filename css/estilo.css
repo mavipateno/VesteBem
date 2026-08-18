@@ -1,14 +1,20 @@
 
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
 
-  /* CONFIGURAÇÕES GERAIS*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     background-color: #fff5f8;
     color: #4a3540;
     line-height: 1.6;
@@ -19,7 +25,10 @@ a {
     color: inherit;
 }
 
-/* CABEÇALHO */
+
+/* ==============================
+   CABEÇALHO
+============================== */
 
 header {
     width: 100%;
@@ -33,24 +42,33 @@ header {
 
     box-shadow: 0 2px 10px rgba(190, 120, 145, 0.12);
 
-    position: relative;
-    z-index: 10;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 700;
     color: #d86b91;
+
+    width: 25%;
 }
 
 nav {
     display: flex;
-    gap: 35px;
+    align-items: center;
+    justify-content: center;
+
+    gap: 45px;
+
+    flex: 1;
 }
 
 nav a {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 19px;
+    font-weight: 600;
+
     color: #5a414c;
 
     transition: 0.3s;
@@ -60,42 +78,58 @@ nav a:hover {
     color: #d86b91;
 }
 
+
+/* ==============================
+   BOTÃO CONTATO
+============================== */
+
 .botao-contato {
+    width: 115px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: #e88bab;
+
     color: white;
 
-    padding: 10px 22px;
+    font-size: 15px;
+    font-weight: 700;
 
-    border-radius: 25px;
+    border-radius: 40%;
 
-    font-weight: bold;
 
-    transition: 0.3s;
+   
+
 }
 
 .botao-contato:hover {
     background-color: #d86b91;
-    transform: translateY(-2px);
 }
-
-/* BANNER DA PÁGINA INICIAL */
+/* ==============================
+   BANNER / INÍCIO
+============================== */
 
 .banner {
-    min-height: 560px;
+    min-height: 600px;
 
-    padding: 70px 8%;
+    padding: 80px 8%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 50px;
+    gap: 60px;
 
     background: linear-gradient(
         135deg,
-        #ffe9f0,
-        #fff7fa
+        #ffe8f0,
+        #fff8fa
     );
+
+    scroll-margin-top: 90px;
 }
 
 .banner-texto {
@@ -103,18 +137,20 @@ nav a:hover {
 }
 
 .banner-texto h1 {
-    font-size: 58px;
+    font-size: 60px;
     line-height: 1.1;
 
     color: #c95780;
 
     margin-bottom: 25px;
+
+    font-weight: 700;
 }
 
 .banner-texto p {
-    font-size: 19px;
+    font-size: 22px;
 
-    max-width: 500px;
+    max-width: 520px;
 
     margin-bottom: 30px;
 
@@ -132,7 +168,7 @@ nav a:hover {
 
     border-radius: 30px;
 
-    font-weight: bold;
+    font-weight: 600;
 
     transition: 0.3s;
 }
@@ -162,10 +198,12 @@ nav a:hover {
 }
 
 
-/*SEÇÃO DE ESTILO*/
+/* ==============================
+   SEÇÃO DE ESTILO
+============================== */
 
 .estilo {
-    padding: 80px 8%;
+    padding: 85px 8%;
 
     text-align: center;
 
@@ -175,7 +213,7 @@ nav a:hover {
 .estilo h2 {
     color: #c95780;
 
-    font-size: 32px;
+    font-size: 35px;
 
     margin-bottom: 45px;
 }
@@ -222,7 +260,7 @@ nav a:hover {
 
     color: #b94f74;
 
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .card h3 {
@@ -230,97 +268,22 @@ nav a:hover {
 
     margin-bottom: 12px;
 
-    font-size: 21px;
+    font-size: 30px;
 }
 
 .card p {
     color: #6b515c;
 
-    font-size: 15px;
-}
-
-/*FRASE */
-
-.frase {
-    padding: 65px 8%;
-
-    text-align: center;
-
-    background-color: #f8cbd9;
-}
-
-.frase p {
-    max-width: 800px;
-
-    margin: auto;
-
-    font-size: 25px;
-
-    font-style: italic;
-
-    color: #7c4357;
+    font-size: 20px;
 }
 
 
-/*ATALHOS*/
-
-.atalhos {
-    padding: 80px 8%;
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-
-    background-color: #fff5f8;
-}
-
-.atalho {
-    background-color: white;
-
-    padding: 30px 20px;
-
-    text-align: center;
-
-    border-radius: 20px;
-
-    border: 1px solid #f2d3dd;
-
-    transition: 0.3s;
-}
-
-.atalho:hover {
-    transform: translateY(-5px);
-
-    box-shadow: 0 10px 25px rgba(180, 100, 125, 0.12);
-}
-
-.atalho span {
-    display: block;
-
-    font-size: 35px;
-
-    margin-bottom: 15px;
-}
-
-.atalho h3 {
-    color: #c95780;
-
-    margin-bottom: 10px;
-}
-
-.atalho p {
-    color: #6b515c;
-
-    font-size: 14px;
-}
-
-
-/* PÁGINA SOBRE*/
+/* ==============================
+   SOBRE
+============================== */
 
 .sobre {
-    padding: 80px 8%;
+    padding: 90px 8%;
 
     display: flex;
 
@@ -329,6 +292,10 @@ nav a:hover {
     justify-content: space-between;
 
     gap: 60px;
+
+    background-color: #fff5f8;
+
+    scroll-margin-top: 90px;
 }
 
 .sobre-texto {
@@ -338,7 +305,7 @@ nav a:hover {
 .sobre-texto h1 {
     color: #c95780;
 
-    font-size: 48px;
+    font-size: 60px;
 
     margin-bottom: 25px;
 }
@@ -346,7 +313,7 @@ nav a:hover {
 .sobre-texto p {
     color: #6b515c;
 
-    font-size: 17px;
+    font-size: 20px;
 
     margin-bottom: 18px;
 }
@@ -358,13 +325,20 @@ nav a:hover {
 .sobre-imagem img {
     width: 100%;
 
+    display: block;
+
     border-radius: 30px;
 
     box-shadow: 0 10px 30px rgba(160, 90, 115, 0.18);
 }
 
+
+/* ==============================
+   OBJETIVOS
+============================== */
+
 .objetivos {
-    padding: 80px 8%;
+    padding: 85px 8%;
 
     text-align: center;
 
@@ -380,20 +354,26 @@ nav a:hover {
 }
 
 .objetivos .cards {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 
-/*  PÁGINA DICAS*/
+/* ==============================
+   DICAS
+============================== */
 
 .dicas {
-    padding: 80px 8%;
+    padding: 90px 8%;
 
     text-align: center;
+
+    background-color: #fff5f8;
+
+    scroll-margin-top: 90px;
 }
 
 .dicas h1 {
-    font-size: 48px;
+    font-size: 50px;
 
     color: #c95780;
 
@@ -403,7 +383,7 @@ nav a:hover {
 .subtitulo {
     color: #6b515c;
 
-    font-size: 18px;
+    font-size: 20px;
 
     margin-bottom: 50px;
 }
@@ -437,9 +417,20 @@ nav a:hover {
 }
 
 .dica-icone {
-    font-size: 38px;
+    width: 60px;
+    height: 60px;
 
-    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f8c5d6;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    margin-bottom: 18px;
 }
 
 .dica-card h2 {
@@ -447,12 +438,12 @@ nav a:hover {
 
     margin-bottom: 12px;
 
-    font-size: 23px;
+    font-size: 25px;
 }
 
 .dica-card p {
     color: #6b515c;
-
+    font-size: 20px;
     margin-bottom: 18px;
 }
 
@@ -466,10 +457,13 @@ nav a:hover {
     margin-bottom: 7px;
 }
 
-/*DICA ESPECIAL*/
+
+/* ==============================
+   DICA ESPECIAL
+============================== */
 
 .dica-especial {
-    margin: 20px 8% 80px;
+    margin: 50px 0 0;
 
     padding: 30px 35px;
 
@@ -482,6 +476,9 @@ nav a:hover {
     align-items: center;
 
     gap: 25px;
+
+    text-align: left;
+
 }
 
 .icone-especial {
@@ -500,7 +497,7 @@ nav a:hover {
 
     color: #c95780;
 
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .dica-especial h2 {
@@ -511,9 +508,38 @@ nav a:hover {
 
 .dica-especial p {
     color: #6b515c;
+    font-size: 20px;
 }
 
-/*  RODAPÉ */
+
+/* ==============================
+   FRASE FINAL
+============================== */
+
+.frase {
+    padding: 70px 8%;
+
+    text-align: center;
+
+    background-color: #f8cbd9;
+}
+
+.frase p {
+    max-width: 800px;
+
+    margin: auto;
+
+    font-size: 25px;
+
+    font-style: italic;
+
+    color: #7c4357;
+}
+
+
+/* ==============================
+   RODAPÉ / CONTATO
+============================== */
 
 footer {
     background-color: #d86b91;
@@ -522,21 +548,37 @@ footer {
 
     text-align: center;
 
-    padding: 45px 8%;
+    padding: 50px 8%;
+
+    scroll-margin-top: 20px;
 }
 
 .footer-logo {
-    font-size: 25px;
+    font-size: 27px;
 
-    font-weight: bold;
+    font-weight: 700;
 
     margin-bottom: 10px;
+}
+
+footer h3 {
+    font-size: 22px;
+
+    margin: 15px 0 8px;
 }
 
 footer p {
     margin-bottom: 15px;
 
     font-size: 15px;
+}
+
+.contato-info {
+    margin: 20px 0;
+}
+
+.contato-info p {
+    margin: 6px 0;
 }
 
 .redes {
@@ -551,13 +593,31 @@ footer p {
     font-size: 13px;
 }
 
-/*RESPONSIVIDADE*/
+
+/* ==============================
+   ANIMAÇÕES
+============================== */
+
+.botao,
+.card,
+.dica-card,
+.atalho,
+nav a {
+    transition: all 0.3s ease;
+}
+
+
+/* ==============================
+   CELULAR / TABLET
+============================== */
 
 @media (max-width: 900px) {
 
     header {
-        flex-direction: column;
+        padding: 18px 5%;
+    }
 
+    nav {
         gap: 20px;
     }
 
@@ -565,6 +625,8 @@ footer p {
         flex-direction: column;
 
         text-align: center;
+
+        padding: 70px 5%;
     }
 
     .banner-texto {
@@ -580,17 +642,20 @@ footer p {
         width: 80%;
     }
 
-    .cards,
-    .objetivos .cards {
+    .cards {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .atalhos {
+    .objetivos .cards {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .sobre {
         flex-direction: column;
+
+        text-align: center;
+
+        padding: 70px 5%;
     }
 
     .sobre-texto,
@@ -598,34 +663,32 @@ footer p {
         width: 100%;
     }
 
+    .sobre-imagem {
+        max-width: 550px;
+    }
+
     .dicas-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* ÁREA DE CONTATO */
 
-#contato {
-    scroll-margin-top: 20px;
-}
-
-footer h3 {
-    font-size: 22px;
-    margin: 15px 0 8px;
-}
-
-.contato-info {
-    margin: 20px 0;
-}
-
-.contato-info p {
-    margin: 6px 0;
-}
+/* ==============================
+   CELULAR
+============================== */
 
 @media (max-width: 600px) {
 
     header {
-        padding: 20px;
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 18px 20px;
+    }
+
+    .logo {
+        font-size: 24px;
     }
 
     nav {
@@ -636,28 +699,36 @@ footer h3 {
         justify-content: center;
     }
 
+    nav a {
+        font-size: 14px;
+    }
+
     .banner {
-        padding: 50px 20px;
+        padding: 55px 20px;
     }
 
     .banner-texto h1 {
         font-size: 40px;
     }
 
+    .banner-texto p {
+        font-size: 16px;
+    }
+
     .banner-imagem {
         width: 100%;
     }
 
-    .cards,
-    .objetivos .cards,
-    .atalhos,
-    .dicas-grid {
-        grid-template-columns: 1fr;
+    .estilo,
+    .sobre,
+    .objetivos,
+    .dicas {
+        padding: 60px 20px;
     }
 
-    .sobre,
-    .dicas {
-        padding: 50px 20px;
+    .estilo h2,
+    .objetivos h2 {
+        font-size: 27px;
     }
 
     .sobre-texto h1,
@@ -665,14 +736,32 @@ footer h3 {
         font-size: 38px;
     }
 
+    .cards,
+    .objetivos .cards,
+    .dicas-grid {
+        grid-template-columns: 1fr;
+    }
+
     .dica-especial {
-        margin: 20px 20px 50px;
+        margin-top: 40px;
 
         padding: 25px;
 
         flex-direction: column;
 
         text-align: center;
+    }
+
+    .frase {
+        padding: 55px 20px;
+    }
+
+    .frase p {
+        font-size: 20px;
+    }
+
+    footer {
+        padding: 40px 20px;
     }
 }
 
